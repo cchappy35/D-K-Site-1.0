@@ -1,0 +1,69 @@
+/* ─────────────────────────────────────────────────────────────
+   D&K Services — shared motion styles (homepage + /fleet)
+   Everything here only applies when motion.js has added the
+   "anim" class to <html>, which it skips for visitors who have
+   "reduce motion" turned on. Without it, content shows normally.
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  --ease-out: cubic-bezier(.16, .84, .3, 1);
+  --ease-snap: cubic-bezier(.2, .9, .25, 1.15);
+}
+
+/* Side-slide reveals start slightly off-screen; clip so they never cause sideways scrolling */
+html.anim, html.anim body { overflow-x: clip; }
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 3px; width: 100%;
+  background: #d82432; transform-origin: 0 50%; transform: scaleX(0);
+  z-index: 10000; pointer-events: none;
+}
+html:not(.anim) .scroll-progress { display: none; }
+
+/* Scroll reveal: fade + rise */
+html.anim .reveal {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition: opacity .7s var(--ease-out), transform .8s var(--ease-out);
+  transition-delay: var(--d, 0ms);
+  will-change: opacity, transform;
+}
+html.anim .reveal.from-left  { transform: translate3d(-40px, 0, 0); }
+html.anim .reveal.from-right { transform: translate3d(40px, 0, 0); }
+html.anim .reveal.pop        { transform: scale(.92); transition-timing-function: var(--ease-snap), var(--ease-snap); }
+/* Side slides only on wide screens; phones get the plain rise so nothing pokes past the screen edge */
+@media (max-width: 899px) {
+  html.anim .reveal.from-left, html.anim .reveal.from-right { transform: translate3d(0, 28px, 0); }
+}
+html.anim body .reveal[data-in] { opacity: 1; transform: none; }
+
+/* Red accent underlines draw in from the left */
+html.anim .bar-grow { transform: scaleX(0); transform-origin: 0 50%; transition: transform .9s var(--ease-out) .25s; }
+html.anim .bar-grow.center { transform-origin: 50% 50%; }
+html.anim body .bar-grow[data-in] { transform: scaleX(1); }
+
+/* Hero entrance on page load */
+@keyframes hero-rise { from { opacity: 0; transform: translate3d(0, 34px, 0); } to { opacity: 1; transform: none; } }
+@keyframes hero-zoom { from { transform: scale(1.12); } to { transform: scale(1); } }
+@keyframes hero-wipe { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+html.anim .hero-in { opacity: 0; animation: hero-rise .9s var(--ease-out) forwards; animation-delay: var(--d, 0ms); }
+html.anim .hero-zoom { animation: hero-zoom 2.6s var(--ease-out) both; }
+html.anim .hero-wipe { transform-origin: 50% 0; animation: hero-wipe 1.1s var(--ease-out) .2s both; }
+
+/* Hover lift for cards and tiles (pointer devices only) */
+@media (hover: hover) {
+  html.anim .lift { transition: transform .35s var(--ease-out), box-shadow .35s var(--ease-out); }
+  html.anim .lift:hover { transform: translate3d(0, -6px, 0); box-shadow: 0 18px 40px -18px rgba(216, 36, 50, .45); }
+  html.anim .zoom-img { overflow: hidden; }
+  html.anim .zoom-img img { transition: transform .6s var(--ease-out); }
+  html.anim .zoom-img:hover img { transform: scale(1.06); }
+}
+
+/* Buttons: arrow nudge + press feedback */
+html.anim .btn-press { transition: transform .15s ease, filter .2s ease, background-color .2s ease; }
+html.anim .btn-press:active { transform: scale(.97); }
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress { display: none; }
+}
