@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fleet Diesel Repair in West Georgia | D&amp;K Services | Waco, GA</title>
+  <meta name="description" content="D&amp;K Services repairs and maintains diesel pickups, medium-duty and heavy-duty work trucks for local fleets out of Waco, GA. One shop, one point of contact. Call (404) 430-7991." />
+  <link rel="canonical" href="https://www.dkservicesco.com/fleet" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fleet Diesel Repair in West Georgia | D&amp;K Services" />
+  <meta property="og:description" content="Keep your trucks working, not waiting. Fleet diesel repair and maintenance out of Waco, GA." />
+  <meta property="og:url" content="https://www.dkservicesco.com/fleet" />
+  <meta property="og:image" content="https://www.dkservicesco.com/uploads/fleet-hero.jpg" />
+  <link rel="icon" type="image/png" href="/uploads/dk-logo.png" />
+  <link rel="apple-touch-icon" href="/uploads/dk-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="/uploads/fleet-hero.jpg" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent: #d82432;
+      --accent-dark: #a5121c;
+      --base: #111111;
+      --text: #ffffff;
+      --muted: #8a8a8a;
+      --gutter: clamp(16px, 4vw, 24px);
+      --max: 1140px;
+    }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { background: var(--base); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    ::selection { background: var(--accent); color: #fff; }
+    a, button { -webkit-tap-highlight-color: rgba(216,36,50,0.18); }
+    :focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+    .wrap { width: 100%; max-width: calc(var(--max) + var(--gutter) * 2); margin: 0 auto; padding: 0 var(--gutter); }
+    .display { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase; line-height: 1.02; letter-spacing: 0.005em; }
+    .pill { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; background: rgba(40,40,40,0.75); color: #fff; padding: 5px 14px; border-radius: 999px; }
+
+    /* Buttons */
+    .btns { display: flex; flex-wrap: wrap; gap: 14px 20px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 46px; padding: 0 20px; border-radius: 6px; font-size: 15px; font-weight: 500; color: #fff; border: none; cursor: pointer; font-family: inherit; transition: background-color .2s, transform .2s; }
+    .btn svg { width: 16px; height: 16px; transition: transform .2s; }
+    .btn:hover svg { transform: translateX(3px); }
+    .btn-red { background: var(--accent); }
+    .btn-red:hover { background: #ec2d3c; }
+    .btn-gray { background: rgba(110,104,104,0.75); }
+    .btn-gray:hover { background: rgba(140,132,132,0.85); }
+
+    /* ── Hero ───────────────────────────── */
+    .hero { position: relative; min-height: min(100svh, 920px); min-height: 640px; display: flex; flex-direction: column; overflow: hidden; }
+    @supports (height: 100svh) { .hero { min-height: max(640px, min(100svh, 920px)); } }
+    .hero-bg { position: absolute; inset: 0; background: url('/uploads/fleet-hero.jpg') center 40% / cover no-repeat; }
+    .hero-bg::after { content: ''; position: absolute; inset: 0;
+      background:
+        linear-gradient(90deg, rgba(10,10,10,0.72) 0%, rgba(10,10,10,0.35) 45%, rgba(10,10,10,0) 70%),
+        linear-gradient(180deg, rgba(10,10,10,0.25) 0%, rgba(10,10,10,0) 30%, rgba(17,17,17,0.55) 72%, #111 100%); }
+    .hero-inner { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; padding-top: clamp(20px, 3vw, 32px); padding-bottom: clamp(40px, 6vw, 72px); }
+    .hero-logo img { width: clamp(80px, 8vw, 106px); height: auto; }
+    .hero-copy { margin-top: auto; max-width: 680px; }
+    .hero h1 { font-size: clamp(42px, 4.7vw, 68px); margin: 18px 0 18px; }
+    .hero p { font-size: clamp(15px, 1.3vw, 16px); color: #e8e8e8; max-width: 440px; margin-bottom: 28px; }
+    .scroll-hint { position: absolute; right: var(--gutter); bottom: clamp(40px, 6vw, 72px); display: flex; align-items: center; gap: 12px; font-size: 14px; color: #ddd; }
+    .scroll-hint .mouse { width: 24px; height: 40px; border: 1.5px solid #ddd; border-radius: 12px; position: relative; }
+    .scroll-hint .mouse::after { content: ''; position: absolute; left: 50%; bottom: 8px; width: 4px; height: 4px; margin-left: -2px; border-radius: 50%; background: #fff; animation: dot 1.8s ease-in-out infinite; }
+    @keyframes dot { 0%,100% { transform: translateY(0); opacity: 1; } 50% { transform: translateY(-12px); opacity: .4; } }
+    @media (max-width: 860px) { .scroll-hint { display: none; } }
+    @media (max-width: 640px) {
+      .hero-bg { background-position: 62% center; }
+      .hero-bg::after { background: linear-gradient(180deg, rgba(10,10,10,0.35) 0%, rgba(10,10,10,0.2) 30%, rgba(17,17,17,0.85) 68%, #111 100%); }
+    }
+
+    /* ── Cost section ───────────────────── */
+    .cost { padding: clamp(64px, 9vw, 120px) 0; }
+    .cost-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+    .dk-mark { position: relative; height: clamp(200px, 26vw, 330px); display: flex; align-items: center; }
+    .dk-mark::before { content: ''; position: absolute; left: -4%; top: 50%; width: clamp(220px, 28vw, 360px); aspect-ratio: 1; transform: translateY(-50%); border-radius: 50%; background: radial-gradient(circle at 45% 45%, #222 0%, #191919 55%, rgba(17,17,17,0) 72%); }
+    .dk-mark .words { position: relative; font-family: 'Bebas Neue', sans-serif; line-height: .82; }
+    .dk-mark .dk { display: block; font-size: clamp(64px, 8.5vw, 112px); color: var(--accent); opacity: .9; margin-bottom: -0.32em; -webkit-mask-image: linear-gradient(180deg, #000 30%, rgba(0,0,0,.25) 75%); mask-image: linear-gradient(180deg, #000 30%, rgba(0,0,0,.25) 75%); }
+    .dk-mark .diesel { position: relative; display: block; font-size: clamp(96px, 12.5vw, 168px); background: linear-gradient(90deg, #6b6b6b 0%, #9a9a9a 35%, #8a8a8a 70%, rgba(80,80,80,0) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .cost h2 { font-size: clamp(34px, 4vw, 50px); margin-bottom: 22px; }
+    .cost p { color: #d6d6d6; font-size: 15px; max-width: 560px; }
+    @media (max-width: 760px) {
+      .cost-grid { grid-template-columns: 1fr; }
+      .dk-mark { height: auto; padding: 24px 0; }
+    }
+
+    /* ── Downtime card ──────────────────── */
+    .downtime { position: relative; }
+    .downtime::before { content: ''; position: absolute; left: -10%; top: -10%; width: 50%; height: 120%; background: radial-gradient(ellipse at left center, rgba(160,20,30,0.28) 0%, rgba(17,17,17,0) 65%); pointer-events: none; }
+    .dt-card { position: relative; background: #2a1517; border-radius: 22px; padding: clamp(14px, 1.4vw, 18px); display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.4fr); gap: clamp(28px, 6vw, 90px); align-items: center; }
+    .dt-photo { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 16 / 17; }
+    .dt-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 38% center; }
+    .dt-photo::after { content: ''; position: absolute; inset: 55% 0 0 0; background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 100%); }
+    .dt-photo .caption { position: absolute; left: 0; right: 0; bottom: 22px; z-index: 1; text-align: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; line-height: 1.2; text-transform: uppercase; padding: 0 24px; }
+    .dt-body { padding: clamp(8px, 2vw, 24px) clamp(8px, 3vw, 40px) clamp(8px, 2vw, 24px) 0; }
+    .dt-body h2 { font-size: clamp(34px, 4vw, 50px); margin-bottom: 22px; }
+    .dt-body p { color: #e0e0e0; font-size: 15px; margin-bottom: 26px; }
+    @media (max-width: 760px) {
+      .dt-card { grid-template-columns: 1fr; }
+      .dt-photo { aspect-ratio: 4 / 3; }
+      .dt-body { padding: 8px 10px 22px; }
+    }
+
+    /* ── Contact ────────────────────────── */
+    .contact { padding: clamp(80px, 10vw, 120px) 0 clamp(32px, 4vw, 48px); text-align: center; }
+    .contact h2 { font-size: clamp(38px, 4.4vw, 52px); margin: 16px 0 22px; }
+    .contact .sub { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; text-transform: uppercase; }
+    .info-row { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin: 44px 0 52px; text-align: left; }
+    .info { display: flex; align-items: center; gap: 14px; min-width: 0; flex: 0 1 auto; }
+    .info + .info { border-left: 1px solid #333; padding-left: clamp(20px, 3vw, 34px); }
+    .info .ic { flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%; background: #2c2c2c; display: grid; place-items: center; }
+    .info .ic svg { width: 16px; height: 16px; }
+    .info .lbl { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); line-height: 1.3; }
+    .info .val { display: block; font-size: 14px; line-height: 1.4; white-space: nowrap; }
+    @media (max-width: 1100px) { .info .val { white-space: normal; } }
+    .info a.val:hover { color: #ff5a66; }
+    @media (max-width: 960px) {
+      .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 24px; }
+      .info + .info { border-left: none; padding-left: 0; }
+    }
+    @media (max-width: 520px) { .info-row { grid-template-columns: 1fr; } }
+
+    /* Form card */
+    .form-card { text-align: left; border-radius: 22px; padding: clamp(24px, 4vw, 48px); background: linear-gradient(180deg, #d82432 0%, #b4161f 40%, #761219 100%); }
+    .form-card h3 { font-size: clamp(34px, 4vw, 48px); margin-bottom: 30px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 16px; margin-bottom: 18px; }
+    @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+    .field { position: relative; }
+    .field + .field { margin-top: 18px; }
+    .grid-2 .field + .field { margin-top: 0; }
+    .field label.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+    .in { width: 100%; min-height: 52px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.32); border-radius: 6px; color: #fff; padding: 12px 18px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 17px; letter-spacing: 0.01em; transition: border-color .2s, background-color .2s; }
+    .in::placeholder { color: #fff; opacity: 1; text-transform: uppercase; }
+    .in:focus { outline: none; border-color: #fff; background: rgba(255,255,255,0.16); }
+    textarea.in { min-height: 250px; resize: vertical; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px; }
+    textarea.in::placeholder { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 17px; }
+    select.in { appearance: none; -webkit-appearance: none; cursor: pointer; text-transform: uppercase; padding-right: 48px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 20px center; }
+    select.in.chosen { text-transform: none; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 16px; }
+    select.in option { color: #111; text-transform: none; font-family: 'Inter', sans-serif; }
+    .in.err { border-color: #ffd34d; }
+    .err-msg { display: block; font-size: 12px; color: #ffd34d; margin-top: 5px; min-height: 0; }
+    .submit { width: 100%; min-height: 52px; margin-top: 18px; border-radius: 6px; background: var(--accent); color: #fff; border: none; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 500; text-transform: uppercase; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: background-color .2s; }
+    .submit:hover { background: #ec2d3c; }
+    .submit:disabled { opacity: .7; cursor: wait; }
+    .submit svg { width: 16px; height: 16px; }
+    .form-alert { margin-top: 14px; padding: 12px 16px; border-radius: 6px; background: rgba(0,0,0,0.3); font-size: 14px; display: none; }
+    .form-alert.show { display: block; }
+    .success { display: none; text-align: center; padding: clamp(32px, 6vw, 72px) 12px; }
+    .success.show { display: block; }
+    .success .check { width: 64px; height: 64px; border-radius: 50%; background: #fff; color: var(--accent); display: grid; place-items: center; margin: 0 auto 22px; }
+    .success .check svg { width: 30px; height: 30px; }
+    .success h3 { margin-bottom: 12px; }
+    .success p { font-size: 16px; color: #fbe1e3; }
+    .success a { text-decoration: underline; }
+    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+    /* ── Footer ─────────────────────────── */
+    footer { position: relative; overflow: hidden; padding-top: clamp(24px, 3vw, 36px); }
+    footer::before { content: ''; position: absolute; left: 50%; bottom: -20%; width: 70%; height: 80%; transform: translateX(-50%); background: radial-gradient(ellipse at center, rgba(150,18,28,0.38) 0%, rgba(17,17,17,0) 65%); pointer-events: none; }
+    .foot-top { position: relative; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; padding-bottom: 36px; }
+    .foot-top .logo img { width: 106px; height: auto; }
+    .foot-links { display: flex; gap: clamp(24px, 6vw, 80px); font-size: 13px; }
+    .foot-links a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; }
+    .foot-links a:hover { color: #ff5a66; }
+    .foot-links svg { width: 15px; height: 15px; }
+    .social { justify-self: end; display: flex; gap: 10px; }
+    .social a { width: 42px; height: 42px; border-radius: 50%; background: var(--accent); display: grid; place-items: center; transition: background-color .2s; }
+    .social a:hover { background: #ec2d3c; }
+    .social svg { width: 18px; height: 18px; }
+    .foot-rule { position: relative; border: none; border-top: 1px solid #333; }
+    .copy { position: relative; text-align: center; font-size: 14px; color: #e6e6e6; padding: 40px 0 24px; }
+    .bigword { position: relative; font-family: 'Bebas Neue', sans-serif; font-size: clamp(76px, 19.2vw, 276px); line-height: .78; text-align: center; white-space: nowrap; letter-spacing: 0.01em; background: linear-gradient(180deg, #4a4a4a 0%, #2c2c2c 55%, rgba(30,30,30,0.6) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; height: 0.62em; overflow: hidden; user-select: none; }
+    @media (max-width: 760px) {
+      .foot-top { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+      .foot-links { flex-direction: column; gap: 0; align-items: center; }
+      .social { justify-self: center; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .scroll-hint .mouse::after { animation: none; }
+      .btn, .btn svg { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="Work truck with the hood up inside the D&amp;K Services shop"></div>
+  <div class="wrap hero-inner">
+    <a class="hero-logo" href="/" aria-label="D&amp;K Services home"><img src="/uploads/dk-logo-transparent.png" alt="D&amp;K Services" width="341" height="360" /></a>
+    <div class="hero-copy">
+      <span class="pill">Waco, GA · Diesel &amp; Gas Vehicle Repair</span>
+      <h1 class="display">Fleet Diesel Repair<br />in West Georgia</h1>
+      <p>Keep your trucks working, not waiting. D&amp;K Services repairs and maintains work trucks for local fleets out of Waco, GA, so your vehicles get back on the road and back on the job.</p>
+      <div class="btns">
+        <a class="btn btn-red" href="tel:4044307991">Call Us Today <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a class="btn btn-gray" href="#schedule">Get a Fleet Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+    <a class="scroll-hint" href="#cost">Scroll to Explore <span class="mouse" aria-hidden="true"></span></a>
+  </div>
+</header>
+
+<main>
+  <!-- ═══ COST OF DOWNTIME ═══ -->
+  <section class="cost" id="cost">
+    <div class="wrap cost-grid">
+      <div class="dk-mark" aria-hidden="true">
+        <div class="words"><span class="dk">DK</span><span class="diesel">DIESEL</span></div>
+      </div>
+      <div>
+        <h2 class="display">Every day a truck sits in the shop costs you money.</h2>
+        <p>D&amp;K Services works with businesses that run diesel pickups, medium-duty and heavy-duty trucks, handling everything from diagnostics to full engine replacements. You get one shop, one point of contact, and a team that knows your trucks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DOWNTIME CTA ═══ -->
+  <section class="downtime">
+    <div class="wrap">
+      <div class="dt-card">
+        <div class="dt-photo">
+          <img src="/uploads/fleet-mechanic.jpg" alt="D&amp;K technician working under the hood of a white Ford Super Duty" loading="lazy" width="1672" height="941" />
+          <span class="caption">D&amp;K Services works with<br />businesses that run diesel.</span>
+        </div>
+        <div class="dt-body">
+          <h2 class="display">Downtime is expensive.<br />A phone call isn’t.</h2>
+          <p>Talk to D&amp;K about keeping your fleet on the road.</p>
+          <div class="btns">
+            <a class="btn btn-red" href="tel:4044307991">Call Us Today <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a class="btn btn-gray" href="#schedule">Get a Fleet Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <span class="pill">Reach Out</span>
+      <h2 class="display">Get In Touch</h2>
+      <div class="sub">Contact Information</div>
+
+      <div class="info-row">
+        <div class="info">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm-.4 4.25-6.54 4.09a2 2 0 0 1-2.12 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44z"/></svg></span>
+          <div><div class="lbl">Email</div><a class="val" href="mailto:bellis@dkservicesco.com">bellis@dkservicesco.com</a></div>
+        </div>
+        <div class="info">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.33 15.58l-3.06-1.31a1.5 1.5 0 0 0-1.73.42l-1.24 1.52a11.6 11.6 0 0 1-5.51-5.51l1.52-1.24a1.5 1.5 0 0 0 .42-1.73L9.42 4.67a1.5 1.5 0 0 0-1.72-.86l-2.84.65A1.5 1.5 0 0 0 3.7 5.92 15.3 15.3 0 0 0 18.08 20.3a1.5 1.5 0 0 0 1.46-1.16l.65-2.84a1.5 1.5 0 0 0-.86-1.72z"/></svg></span>
+          <div><div class="lbl">Phone</div><a class="val" href="tel:4044307991">(404) 430-7991</a></div>
+        </div>
+        <div class="info">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></span>
+          <div><div class="lbl">Location</div><a class="val" href="https://maps.google.com/?q=522+Buncombe-Waco+Rd,+Waco,+GA+30182" target="_blank" rel="noopener noreferrer">522 Buncombe-Waco Rd, Waco, GA 30182</a></div>
+        </div>
+        <div class="info">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm3.6 13.4a.9.9 0 0 1-1.24.3l-2.83-1.7A1 1 0 0 1 11 13V7.5a.9.9 0 0 1 1.8 0v5.03l2.5 1.5a.9.9 0 0 1 .3 1.37z"/></svg></span>
+          <div><div class="lbl">Hours</div><div class="val">Mon–Fri: 7:00 AM – 5:00 PM</div></div>
+        </div>
+      </div>
+
+      <div class="form-card" id="schedule">
+        <form id="fleet-form" novalidate>
+          <h3 class="display">Schedule Service</h3>
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="grid-2">
+            <div class="field">
+              <label class="sr" for="f-name">Name (required)</label>
+              <input class="in" id="f-name" name="name" type="text" placeholder="Name" autocomplete="name" required />
+              <span class="err-msg" data-for="name"></span>
+            </div>
+            <div class="field">
+              <label class="sr" for="f-phone">Phone number</label>
+              <input class="in" id="f-phone" name="phone" type="tel" placeholder="Phone No" autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label class="sr" for="f-email">Email (required)</label>
+              <input class="in" id="f-email" name="email" type="email" placeholder="Email" autocomplete="email" required />
+              <span class="err-msg" data-for="email"></span>
+            </div>
+            <div class="field">
+              <label class="sr" for="f-vehicle">Vehicle (year, make, model)</label>
+              <input class="in" id="f-vehicle" name="vehicle" type="text" placeholder="Vehicle (Year / Make / Model)" />
+            </div>
+          </div>
+          <div class="field">
+            <label class="sr" for="f-service">Service needed (required)</label>
+            <select class="in" id="f-service" name="service" required>
+              <option value="" selected disabled>Service Needed</option>
+              <option>Fleet Maintenance</option>
+              <option>Engine Diagnostics &amp; Repair</option>
+              <option>Heavy Line &amp; Internal Engine</option>
+              <option>High Performance Upgrades</option>
+              <option>Steering &amp; Suspension</option>
+              <option>Cooling System Service</option>
+              <option>Transmission Diagnostics</option>
+              <option>Differential Diagnostics</option>
+              <option>A/C System Repair</option>
+              <option>Other</option>
+            </select>
+            <span class="err-msg" data-for="service"></span>
+          </div>
+          <div class="field">
+            <label class="sr" for="f-message">Message</label>
+            <textarea class="in" id="f-message" name="message" placeholder="Message"></textarea>
+          </div>
+          <button class="submit" type="submit">Submit Request <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          <div class="form-alert" role="alert"></div>
+        </form>
+        <div class="success" role="status" aria-live="polite">
+          <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3 class="display">Request received</h3>
+          <p>Thanks — the D&amp;K team will be in touch shortly. Need us sooner? Call <a href="tel:4044307991">(404) 430-7991</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="logo" href="/" aria-label="D&amp;K Services home"><img src="/uploads/dk-logo-transparent.png" alt="D&amp;K Services" width="341" height="360" loading="lazy" /></a>
+      <div class="foot-links">
+        <a href="tel:4044307991"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.33 15.58l-3.06-1.31a1.5 1.5 0 0 0-1.73.42l-1.24 1.52a11.6 11.6 0 0 1-5.51-5.51l1.52-1.24a1.5 1.5 0 0 0 .42-1.73L9.42 4.67a1.5 1.5 0 0 0-1.72-.86l-2.84.65A1.5 1.5 0 0 0 3.7 5.92 15.3 15.3 0 0 0 18.08 20.3a1.5 1.5 0 0 0 1.46-1.16l.65-2.84a1.5 1.5 0 0 0-.86-1.72z"/></svg>(404) 430-7991</a>
+        <a href="mailto:bellis@dkservicesco.com"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm-.4 4.25-6.54 4.09a2 2 0 0 1-2.12 0L4.4 8.25a.85.85 0 1 1 .9-1.44L12 11l6.7-4.19a.85.85 0 1 1 .9 1.44z"/></svg>bellis@dkservicesco.com</a>
+      </div>
+      <div class="social">
+        <a href="https://www.facebook.com/share/1BsK5Hy3Re/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="D&amp;K Services on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8V6.5c0-.7.5-1 1-1h2V2h-3c-3 0-4 2-4 4.5V8H8v3.5h2V22h4V11.5h2.8L17.3 8z"/></svg></a>
+        <a href="https://www.instagram.com/dkservicess" target="_blank" rel="noopener noreferrer" aria-label="D&amp;K Services on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+    <hr class="foot-rule" />
+    <p class="copy">Copyright © <span id="yr">2026</span> D&amp;K Services Co. All Rights Reserved</p>
+    <div class="bigword" aria-hidden="true">D&amp;K SERVICE</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var WEB3FORMS_ACCESS_KEY = 'f5e92126-1a47-47b2-a86a-8a10601fbc76'; // same key as the homepage form → bellis@dkservicesco.com
+  var form = document.getElementById('fleet-form');
+  var card = document.getElementById('schedule');
+  var alertBox = form.querySelector('.form-alert');
+  var btn = form.querySelector('.submit');
+  var select = document.getElementById('f-service');
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  select.addEventListener('change', function () { select.classList.toggle('chosen', !!select.value); });
+
+  function setErr(name, msg) {
+    var input = form.elements[name];
+    var slot = form.querySelector('.err-msg[data-for="' + name + '"]');
+    input.classList.toggle('err', !!msg);
+    input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+    if (slot) slot.textContent = msg || '';
+  }
+
+  function validate() {
+    var ok = true, first = null;
+    var v = { name: form.elements.name.value.trim(), email: form.elements.email.value.trim(), service: select.value };
+    setErr('name', v.name ? '' : 'Required'); if (!v.name) { ok = false; first = first || 'name'; }
+    var emailMsg = !v.email ? 'Required' : (/\S+@\S+\.\S+/.test(v.email) ? '' : 'Invalid email');
+    setErr('email', emailMsg); if (emailMsg) { ok = false; first = first || 'email'; }
+    setErr('service', v.service ? '' : 'Required'); if (!v.service) { ok = false; first = first || 'service'; }
+    if (first) form.elements[first].focus();
+    return ok;
+  }
+
+  ['name', 'email'].forEach(function (n) {
+    form.elements[n].addEventListener('input', function () { if (form.elements[n].classList.contains('err')) setErr(n, ''); });
+  });
+  select.addEventListener('change', function () { setErr('service', ''); });
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    alertBox.classList.remove('show');
+    if (!validate()) return;
+    btn.disabled = true;
+    btn.firstChild.nodeValue = 'Sending… ';
+    var f = form.elements;
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: 'New FLEET Service Request — DK Services Website (/fleet)',
+        from_name: 'DK Services Website — Fleet page',
+        botcheck: f.botcheck.checked,
+        source_page: '/fleet',
+        name: f.name.value.trim(),
+        phone: f.phone.value.trim(),
+        email: f.email.value.trim(),
+        vehicle: f.vehicle.value.trim(),
+        service: select.value,
+        message: f.message.value.trim()
+      })
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data && data.success) {
+          form.style.display = 'none';
+          card.querySelector('.success').classList.add('show');
+          card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          throw new Error((data && data.message) || 'Something went wrong.');
+        }
+      })
+      .catch(function (err) {
+        alertBox.textContent = (err && err.message && err.message !== 'Failed to fetch' ? err.message + ' ' : 'Network error. ') + 'Please try again or call us at (404) 430-7991.';
+        alertBox.classList.add('show');
+      })
+      .then(function () {
+        btn.disabled = false;
+        btn.firstChild.nodeValue = 'Submit Request ';
+      });
+  });
+})();
+</script>
+</body>
+</html>
