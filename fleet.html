@@ -31,6 +31,7 @@
       --max: 1140px;
     }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    #schedule, #cost, #contact { scroll-margin-top: 114px; } /* header height + room for the reveal offset */
     body { background: var(--base); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
@@ -58,10 +59,38 @@
     .hero-bg { position: absolute; inset: 0; background: url('/uploads/fleet-hero.jpg') center 40% / cover no-repeat; }
     .hero-bg::after { content: ''; position: absolute; inset: 0;
       background:
+        linear-gradient(180deg, rgba(10,10,10,0.7) 0, rgba(10,10,10,0) 150px), /* keeps the header readable over the bright ceiling */
         linear-gradient(90deg, rgba(10,10,10,0.72) 0%, rgba(10,10,10,0.35) 45%, rgba(10,10,10,0) 70%),
         linear-gradient(180deg, rgba(10,10,10,0.25) 0%, rgba(10,10,10,0) 30%, rgba(17,17,17,0.55) 72%, #111 100%); }
-    .hero-inner { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; padding-top: clamp(20px, 3vw, 32px); padding-bottom: clamp(40px, 6vw, 72px); }
-    .hero-logo img { width: clamp(80px, 8vw, 106px); height: auto; }
+    .hero-inner { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; padding-top: calc(70px + clamp(20px, 4vw, 48px)); padding-bottom: clamp(40px, 6vw, 72px); }
+
+    /* ── Site header (matches the homepage nav) ── */
+    .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: transparent; border-bottom: 1px solid transparent; transition: background .3s, border-color .3s; }
+    .site-nav.scrolled, .site-nav.open { background: rgba(10,10,10,0.97); border-bottom-color: #2d2d2d; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+    .nav-bar { max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px,3vw,24px); height: 70px; display: flex; align-items: center; gap: 24px; }
+    .nav-brand { flex: 0 0 auto; min-height: 44px; display: flex; flex-direction: column; justify-content: center; text-decoration: none; }
+    .nav-brand .wm { font-family: 'Bebas Neue', sans-serif; font-size: clamp(22px,3vw,28px); letter-spacing: .05em; line-height: 1; color: #fff; }
+    .nav-brand .wm span { color: var(--accent); }
+    .nav-brand .tag { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; letter-spacing: .18em; color: #999; margin-top: 1px; }
+    .nav-links { flex: 1; display: flex; gap: clamp(16px,2vw,32px); justify-content: center; align-items: center; }
+    .nav-links a { color: #ccc; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; padding: 4px 0; border-bottom: 2px solid transparent; min-height: 44px; display: flex; align-items: center; transition: color .2s, border-color .2s; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: #fff; border-bottom-color: var(--accent); }
+    .nav-cta { background: var(--accent); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: .12em; text-transform: uppercase; padding: 10px 20px; display: inline-flex; align-items: center; min-height: 44px; transition: filter .2s; }
+    .nav-cta:hover { filter: brightness(1.15); }
+    .nav-toggle { display: none; margin-left: auto; background: none; border: none; color: #fff; padding: 8px; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; cursor: pointer; }
+    .nav-toggle svg { width: 24px; height: 24px; }
+    .nav-toggle .ic-x { display: none; }
+    .site-nav.open .nav-toggle .ic-menu { display: none; }
+    .site-nav.open .nav-toggle .ic-x { display: block; }
+    .nav-mobile { display: none; background: #0a0a0a; border-top: 1px solid #2d2d2d; padding: 8px 24px 24px; }
+    .nav-mobile a.item { display: flex; align-items: center; width: 100%; color: #ccc; font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: 13px 0; border-bottom: 1px solid #1e1e1e; min-height: 50px; }
+    .nav-mobile a.item[aria-current="page"] { color: #fff; }
+    .nav-mobile .nav-cta { display: flex; justify-content: center; margin-top: 20px; font-size: 16px; padding: 14px 24px; min-height: 50px; }
+    .site-nav.open .nav-mobile { display: block; }
+    @media (max-width: 768px) {
+      .nav-links, .nav-bar > .nav-cta { display: none; }
+      .nav-toggle { display: flex; }
+    }
     .hero-copy { margin-top: auto; max-width: 680px; }
     .hero h1 { font-size: clamp(42px, 4.7vw, 68px); margin: 18px 0 18px; }
     .hero p { font-size: clamp(15px, 1.3vw, 16px); color: #e8e8e8; max-width: 440px; margin-bottom: 28px; }
@@ -72,7 +101,7 @@
     @media (max-width: 860px) { .scroll-hint { display: none; } }
     @media (max-width: 640px) {
       .hero-bg { background-position: 62% center; }
-      .hero-bg::after { background: linear-gradient(180deg, rgba(10,10,10,0.35) 0%, rgba(10,10,10,0.2) 30%, rgba(17,17,17,0.85) 68%, #111 100%); }
+      .hero-bg::after { background: linear-gradient(180deg, rgba(10,10,10,0.7) 0, rgba(10,10,10,0.2) 140px, rgba(10,10,10,0.2) 30%, rgba(17,17,17,0.85) 68%, #111 100%); }
     }
 
     /* ── Cost section ───────────────────── */
@@ -201,11 +230,41 @@
 </head>
 <body>
 
+<!-- ═══ SITE HEADER (same as homepage) ═══ -->
+<header class="site-nav" id="site-nav">
+  <div class="nav-bar">
+    <a class="nav-brand" href="/" aria-label="DK Diesel home">
+      <span class="wm"><span>DK</span> DIESEL</span>
+      <span class="tag">D&amp;K SERVICES CO. · WACO, GA</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/#services">Services</a>
+      <a href="/#gallery">Gallery</a>
+      <a href="/#about-us">About Us</a>
+      <a href="/fleet" aria-current="page">Fleet Services</a>
+      <a href="#schedule">Contact</a>
+    </nav>
+    <a class="nav-cta" href="tel:4044307991">Call Us Now</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+      <svg class="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile">
+    <a class="item" href="/#services">Services</a>
+    <a class="item" href="/#gallery">Gallery</a>
+    <a class="item" href="/#about-us">About Us</a>
+    <a class="item" href="/fleet" aria-current="page">Fleet Services</a>
+    <a class="item" href="#schedule">Contact</a>
+    <a class="nav-cta" href="tel:4044307991">Call Us Now</a>
+  </nav>
+</header>
+
+
 <!-- ═══ HERO ═══ -->
-<header class="hero">
+<section class="hero">
   <div class="hero-bg hero-zoom" role="img" aria-label="Work truck with the hood up inside the D&amp;K Services shop"></div>
   <div class="wrap hero-inner">
-    <a class="hero-logo hero-in" href="/" aria-label="D&amp;K Services home"><img src="/uploads/dk-logo-transparent.png" alt="D&amp;K Services" width="341" height="360" /></a>
     <div class="hero-copy">
       <span class="pill hero-in" style="--d:150ms">Waco, GA · Diesel &amp; Gas Vehicle Repair</span>
       <h1 class="display hero-in" style="--d:300ms">Fleet Diesel Repair<br />in West Georgia</h1>
@@ -217,7 +276,7 @@
     </div>
     <a class="scroll-hint hero-in" style="--d:900ms" href="#cost">Scroll to Explore <span class="mouse" aria-hidden="true"></span></a>
   </div>
-</header>
+</section>
 
 <main>
   <!-- ═══ COST OF DOWNTIME ═══ -->
@@ -357,6 +416,22 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  var nav = document.getElementById('site-nav');
+  var toggle = nav.querySelector('.nav-toggle');
+  function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 40); }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  function setOpen(open) {
+    nav.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  toggle.addEventListener('click', function () { setOpen(!nav.classList.contains('open')); });
+  nav.querySelectorAll('.nav-mobile a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
 <script>
 (function () {
   var WEB3FORMS_ACCESS_KEY = 'f5e92126-1a47-47b2-a86a-8a10601fbc76'; // same key as the homepage form → bellis@dkservicesco.com
