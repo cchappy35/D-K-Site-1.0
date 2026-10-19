@@ -122,7 +122,7 @@ function Nav({ accent }) {
 
         {/* CTA */}
         <div className="desktop-nav">
-          <a href="tel:7708913478"
+          <a href="tel:4044307991"
           style={{ background: accent, color: '#fff', fontFamily: 'Barlow Condensed, sans-serif', fontWeight: 700, fontSize: 14, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '10px 20px', display: 'inline-flex', alignItems: 'center', minHeight: 44, transition: 'filter 0.2s' }}
           onMouseEnter={(e) => e.currentTarget.style.filter = 'brightness(1.15)'}
           onMouseLeave={(e) => e.currentTarget.style.filter = 'brightness(1)'}>
@@ -146,7 +146,7 @@ function Nav({ accent }) {
               {link}
             </Tag>
         );})}
-          <a href="tel:7708913478"
+          <a href="tel:4044307991"
         style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 20, background: accent, color: '#fff', fontFamily: 'Barlow Condensed, sans-serif', fontWeight: 700, fontSize: 16, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '14px 24px', minHeight: 50 }}>
             Call Us Now
           </a>
@@ -366,7 +366,7 @@ function FleetCallout({ accent }) {
         style={{ background: accent, color: '#fff', fontFamily: 'Barlow Condensed, sans-serif', fontWeight: 700, fontSize: 'clamp(14px,1.4vw,16px)', letterSpacing: '0.1em', textTransform: 'uppercase', padding: 'clamp(14px,1.5vw,18px) clamp(24px,3vw,44px)', minHeight: 50, transition: 'filter 0.2s', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
         onMouseEnter={(e) => e.currentTarget.style.filter = 'brightness(1.15)'}
         onMouseLeave={(e) => e.currentTarget.style.filter = 'brightness(1)'}>
-          Contact Us About Fleet Service</a>
+          Learn More About Our Fleet Services</a>
       </div>
     </section>);
 

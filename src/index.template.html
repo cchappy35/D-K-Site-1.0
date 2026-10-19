@@ -25,6 +25,7 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    section[id] { scroll-margin-top: 70px; } /* /#services etc. land below the fixed nav */
     body { background: #111111; color: #ffffff; font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
     /* Kill the blue tap-flash on touch, keep our own hover/active states */
     a, button { -webkit-tap-highlight-color: rgba(216,36,50,0.18); }
