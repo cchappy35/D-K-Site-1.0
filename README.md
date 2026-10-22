@@ -28,3 +28,10 @@ The homepage is written in React (JSX) and **pre-built** so it loads fast and Go
 
 ## Forms
 Both the homepage and `/fleet` forms post to **Web3Forms**, which emails submissions to bellis@dkservicesco.com. `/fleet` submissions have "FLEET" in the subject line. Both forms include a hidden spam trap (`botcheck`).
+
+## Tracking
+- **Google Tag Manager** `GTM-TX93JH67` and **Meta Pixel** `1571459384670191` load on every page (in `src/index.template.html`, `fleet.html`, `privacy.html`).
+- Meta `Lead` fires on both forms only after Web3Forms confirms the submission. The /fleet form also pushes `fleet_quote_submit` to the GTM dataLayer at the same moment.
+- Meta `Contact` fires on any tap of a `tel:` link, sitewide.
+- If a Meta Pixel tag is ever added inside GTM, remove the hard-coded Pixel here or PageViews will double-count.
+
