@@ -570,6 +570,8 @@ function Contact({ accent }) {
       });
       const data = await res.json();
       if (data.success) {
+        // Conversion tracking: only after Web3Forms confirms the submission
+        if (window.fbq) window.fbq('track', 'Lead');
         setSubmitted(true);
       } else {
         setSubmitError(data.message || 'Something went wrong. Please call us or try again.');
